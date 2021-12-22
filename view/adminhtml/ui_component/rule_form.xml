@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © IURCO and PRISMA. All rights reserved.
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">rule_form.RulesGrid_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Promotion Rule Form</item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <dataScope>data</dataScope>
+        <namespace>rule_form</namespace>
+        <buttons>
+            <button name="back">
+                <url path="*/*/index"/>
+                <class>back</class>
+                <label translate="true">Back</label>
+            </button>
+            <button name="reset">
+                <class>reset</class>
+                <label translate="true">Reset</label>
+            </button>
+            <button name="save">
+                <class>primary</class>
+                <label translate="true">Save</label>
+            </button>
+        </buttons>
+        <deps>
+            <dep>rule_form.RulesGrid_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="RulesGrid_data_source" component="Magento_Ui/js/form/provider">
+        <settings>
+            <submitUrl path="*/*/save"/>
+        </settings>
+        <dataProvider class="Prisma\DecidirPromotions\Model\DataProvider\Rule" name="RulesGrid_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>entity_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <fieldset name="general">
+        <settings>
+            <label translate="true">Promotion Rule Configuration</label>
+        </settings>
+        <field name="entity_id" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">ID</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <visible>false</visible>
+            </settings>
+        </field>
+        <field name="is_active" sortOrder="1" formElement="checkbox">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">is_active</item>
+                    <item name="default" xsi:type="number">1</item>
+                </item>
+            </argument>
+            <settings>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">false</rule>
+                </validation>
+                <dataType>boolean</dataType>
+                <label translate="true">Enable Promotion</label>
+            </settings>
+            <formElements>
+                <checkbox>
+                    <settings>
+                        <valueMap>
+                            <map name="false" xsi:type="string">0</map>
+                            <map name="true" xsi:type="string">1</map>
+                        </valueMap>
+                        <prefer>toggle</prefer>
+                    </settings>
+                </checkbox>
+            </formElements>
+        </field>
+        <field name="card_id" sortOrder="20" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Card\Options</item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Applicable Cards</label>
+                <dataScope>card_id</dataScope>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <caption translate="true">Please Select a Card</caption>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <field name="bank_id" sortOrder="30" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Bank\Options</item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Applicable Banks</label>
+                <dataScope>bank_id</dataScope>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <caption translate="true">Please Select a Bank</caption>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <field name="from_date" formElement="date" sortOrder="30">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">from_date</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Start Date</label>
+                <dataType>text</dataType>
+                <dataScope>from_date</dataScope>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                    <rule name="validate-date" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="to_date" formElement="date" sortOrder="40">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">to_date</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">End Date</label>
+                <dataType>text</dataType>
+                <dataScope>to_date</dataScope>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                    <rule name="validate-date" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="rule_name" sortOrder="10" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">rule_name</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Rule Name</label>
+                <dataType>text</dataType>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="priority" sortOrder="40" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">priority</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Priority</label>
+                <dataType>text</dataType>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                    <rule name="validate-number" xsi:type="boolean">true</rule>
+                    <rule name="less-than-equals-to" xsi:type="number">99</rule>
+                    <rule name="greater-than-equals-to" xsi:type="number">1</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="applicable_days" sortOrder="50" formElement="multiselect">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magento\Config\Model\Config\Source\Locale\Weekdays</item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Applicable Days</label>
+                <dataScope>applicable_days</dataScope>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="applicable_stores" sortOrder="60" formElement="multiselect">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magento\Cms\Ui\Component\Listing\Column\Cms\Options</item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Applicable Stores</label>
+                <dataScope>applicable_stores</dataScope>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+    </fieldset>
+    <fieldset name="fee_form">
+        <settings>
+            <label translate="true">Fee Plans</label>
+        </settings>
+        <dynamicRows name="dynamic_rows">
+            <settings>
+                <addButtonLabel translate="true">Add Record</addButtonLabel>
+                <additionalClasses>
+                    <class name="admin__field-wide">true</class>
+                </additionalClasses>
+                <componentType>dynamicRows</componentType>
+            </settings>
+            <container name="record" component="Magento_Ui/js/dynamic-rows/record">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="isTemplate" xsi:type="boolean">true</item>
+                        <item name="is_collection" xsi:type="boolean">true</item>
+                        <item name="componentType" xsi:type="string">container</item>
+                    </item>
+                </argument>
+                <field name="fee_period" sortOrder="41" formElement="input">
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="source" xsi:type="string">fee_period</item>
+                        </item>
+                    </argument>
+                    <settings>
+                        <label translate="true">Fee Period</label>
+                        <dataType>number</dataType>
+                        <validation>
+                            <rule name="required-entry" xsi:type="boolean">true</rule>
+                            <rule name="validate-number" xsi:type="boolean">true</rule>
+                            <rule name="less-than-equals-to" xsi:type="number">99</rule>
+                            <rule name="greater-than-equals-to" xsi:type="number">1</rule>
+                        </validation>
+                    </settings>
+                </field>
+                <field name="coefficient" sortOrder="42" formElement="input">
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="source" xsi:type="string">coefficient</item>
+                        </item>
+                    </argument>
+                    <settings>
+                        <label translate="true">Coefficient</label>
+                        <dataType>number</dataType>
+                        <validation>
+                            <rule name="required-entry" xsi:type="boolean">true</rule>
+                            <rule name="validate-number" xsi:type="boolean">true</rule>
+                            <rule name="greater-than-equals-to" xsi:type="number">1</rule>
+                        </validation>
+                    </settings>
+                </field>
+                <field name="tea" sortOrder="43" formElement="input">
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="source" xsi:type="string">tea</item>
+                        </item>
+                    </argument>
+                    <settings>
+                        <label translate="true">% TEA</label>
+                        <dataType>number</dataType>
+                        <validation>
+                            <rule name="required-entry" xsi:type="boolean">true</rule>
+                            <rule name="validate-number" xsi:type="boolean">true</rule>
+                            <rule name="greater-than-equals-to" xsi:type="number">0</rule>
+                        </validation>
+                    </settings>
+                </field>
+                <field name="cft" sortOrder="44" formElement="input">
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="source" xsi:type="string">cft</item>
+                        </item>
+                    </argument>
+                    <settings>
+                        <label translate="true">% CFT</label>
+                        <dataType>number</dataType>
+                        <validation>
+                            <rule name="required-entry" xsi:type="boolean">true</rule>
+                            <rule name="validate-number" xsi:type="boolean">true</rule>
+                            <rule name="greater-than-equals-to" xsi:type="number">0</rule>
+                        </validation>
+                    </settings>
+                </field>
+                <field name="fee_to_send" sortOrder="47" formElement="input">
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="source" xsi:type="string">fee_to_send</item>
+                        </item>
+                    </argument>
+                    <settings>
+                        <label translate="true">Fee to Send</label>
+                        <dataType>number</dataType>
+                        <validation>
+                            <rule name="required-entry" xsi:type="boolean">true</rule>
+                            <rule name="validate-number" xsi:type="boolean">true</rule>
+                            <rule name="greater-than-equals-to" xsi:type="number">1</rule>
+                        </validation>
+                    </settings>
+                </field>
+                <actionDelete template="Magento_Backend/dynamic-rows/cells/action-delete">
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="fit" xsi:type="boolean">false</item>
+                        </item>
+                    </argument>
+                    <settings>
+                        <additionalClasses>
+                            <class name="data-grid-actions-cell">true</class>
+                        </additionalClasses>
+                        <dataType>number</dataType>
+                        <label>Actions</label>
+                        <componentType>actionDelete</componentType>
+                    </settings>
+                </actionDelete>
+            </container>
+        </dynamicRows>
+    </fieldset>
+</form>

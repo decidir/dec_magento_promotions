@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © IURCO and PRISMA. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="PrismaBanksPromotions"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="resourceModel" xsi:type="string">
+                Prisma\DecidirPromotions\Model\ResourceModel\Bank\Collection
+            </argument>
+            <argument name="mainTable" xsi:type="string">prisma_decidir_promotions_bank</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument xsi:type="array">
+                <item xsi:type="string" name="BanksGrid_data_source">PrismaBanksPromotions</item>
+            </argument>
+            <argument xsi:type="array">
+                <item xsi:type="string" name="CardsGrid_data_source">CardDataProvider</item>
+            </argument>
+            <argument xsi:type="array">
+                <item xsi:type="string" name="RulesGrid_data_source">RulesDataProvider</item>
+            </argument>
+            <argument xsi:type="array">
+                <item xsi:type="string" name="decidir_transactions_listing_data_source">TransactionDataProvider</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Prisma\DecidirPromotions\Model\BankImageUploader" type="Prisma\DecidirPromotions\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">decidir/banks/tmp</argument>
+            <argument name="basePath" xsi:type="string">decidir/banks</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Prisma\DecidirPromotions\Model\CardImageUploader" type="Prisma\DecidirPromotions\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">decidir/cards/tmp</argument>
+            <argument name="basePath" xsi:type="string">decidir/cards</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Prisma\DecidirPromotions\Controller\Adminhtml\Bank\Upload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Prisma\DecidirPromotions\Model\BankImageUploader</argument>
+        </arguments>
+    </type>
+    <type name="Prisma\DecidirPromotions\Controller\Adminhtml\Bank\Save">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Prisma\DecidirPromotions\Model\BankImageUploader</argument>
+        </arguments>
+    </type>
+    <type name="Prisma\DecidirPromotions\Controller\Adminhtml\Card\Upload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Prisma\DecidirPromotions\Model\CardImageUploader</argument>
+        </arguments>
+    </type>
+    <type name="Prisma\DecidirPromotions\Controller\Adminhtml\Card\Save">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Prisma\DecidirPromotions\Model\CardImageUploader</argument>
+        </arguments>
+    </type>
+    <preference for="Prisma\DecidirPromotions\Api\BankRepositoryInterface"
+                type="Prisma\DecidirPromotions\Model\Repositories\BankRepository"
+    />
+    <preference for="Prisma\DecidirPromotions\Api\Data\BankInterface"
+                type="Prisma\DecidirPromotions\Model\Bank"
+    />
+    <preference for="Prisma\DecidirPromotions\Api\CreditCardRepositoryInterface"
+                type="Prisma\DecidirPromotions\Model\Repositories\CreditCardRepository"
+    />
+    <preference for="Prisma\DecidirPromotions\Api\Data\CreditCardInterface"
+                type="Prisma\DecidirPromotions\Model\CreditCard"
+    />
+    <preference for="Prisma\DecidirPromotions\Api\RuleRepositoryInterface"
+                type="Prisma\DecidirPromotions\Model\Repositories\RuleRepository"
+    />
+    <preference for="Prisma\DecidirPromotions\Api\Data\RuleInterface"
+                type="Prisma\DecidirPromotions\Model\Rule"
+    />
+    <preference for="Prisma\DecidirPromotions\Api\Data\RuleSearchResultsInterface"
+                type="Prisma\DecidirPromotions\Model\RuleSearchResults" />
+
+    <preference for="Prisma\DecidirPromotions\Api\TransactionRepositoryInterface"
+                type="Prisma\DecidirPromotions\Model\Repositories\TransactionRepository"
+    />
+    <preference for="Prisma\DecidirPromotions\Api\Data\TransactionInterface"
+                type="Prisma\DecidirPromotions\Model\Transaction"
+    />
+    <preference for="Prisma\DecidirPromotions\Api\Data\TransactionSearchResultsInterface"
+                type="Prisma\DecidirPromotions\Model\TransactionSearchResults"
+    />
+
+    <virtualType name="CardDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="resourceModel" xsi:type="string">
+                Prisma\DecidirPromotions\Model\ResourceModel\CreditCard\Collection
+            </argument>
+            <argument name="mainTable" xsi:type="string">prisma_decidir_promotions_card</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\BanksAction" type="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Action">
+        <arguments>
+            <argument name="editUrl" xsi:type="string">promotions/bank/edit</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\CcAction" type="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Action">
+        <arguments>
+            <argument name="editUrl" xsi:type="string">promotions/card/edit</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\RulesAction" type="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Action">
+        <arguments>
+            <argument name="editUrl" xsi:type="string">promotions/rule/edit</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="RulesDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="resourceModel" xsi:type="string">
+                Prisma\DecidirPromotions\Model\ResourceModel\Rule\Collection
+            </argument>
+            <argument name="mainTable" xsi:type="string">prisma_decidir_promotions_rules</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="TransactionDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="resourceModel" xsi:type="string">
+                Prisma\DecidirPromotions\Model\ResourceModel\Transaction\Collection
+            </argument>
+            <argument name="mainTable" xsi:type="string">prisma_decidir_transaction_logs</argument>
+        </arguments>
+    </virtualType>
+
+    <!-- Plugins -->
+    <type name="Prisma\Decidir\Model\Ui\ConfigProvider">
+        <plugin name="Prisma_DecidirPromotions_AfterGetConfig" type="Prisma\DecidirPromotions\Plugin\UpdateDecidirConfigProvider" sortOrder="100"/>
+    </type>
+
+    <!-- Plugins -->
+    <type name="Prisma\Decidir\Model\ResultProvider">
+        <plugin name="Prisma_DecidirPromotions_AfterNormalizeResponse" type="Prisma\DecidirPromotions\Plugin\SaveNormalizedResponse" sortOrder="100"/>
+    </type>
+
+    <!-- Prisma_Decidir override-->
+    <virtualType name="DecidirFacade" type="Magento\Payment\Model\Method\Adapter">
+        <arguments>
+            <argument name="infoBlockType" xsi:type="string">Prisma\DecidirPromotions\Block\Adminhtml\Info</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="DecidirCaptureRequest" type="Magento\Payment\Gateway\Request\BuilderComposite">
+        <arguments>
+            <argument name="builders" xsi:type="array">
+                <item name="payment" xsi:type="string">Prisma\DecidirPromotions\Gateway\Request\PaymentDataBuilder</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Transaction\ViewAction" >
+        <arguments>
+            <argument name="viewUrl" xsi:type="string">promotions/transaction/view</argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Prisma\DecidirPromotions\Model\Method\VirtualDebug" type="Magento\Framework\Logger\Handler\Base">
+        <arguments>
+            <argument name="fileName" xsi:type="string">/var/log/decidir_cleanup_cron.log</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Prisma\DecidirPromotions\Model\Method\VirtualLogger" type="Magento\Framework\Logger\Monolog">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="debug" xsi:type="object">Prisma\DecidirPromotions\Model\Method\VirtualDebug</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Prisma\DecidirPromotions\Cron\CleanupTransactionLogTable">
+        <arguments>
+            <argument name="logger" xsi:type="object">Prisma\DecidirPromotions\Model\Method\VirtualLogger</argument>
+        </arguments>
+    </type>
+</config>

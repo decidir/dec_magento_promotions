@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © IURCO and PRISMA. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Prisma_DecidirPromotions::decidir_promotions" title="Decidir Promotion Rules"/>
+                <resource id="Prisma_DecidirPromotions::listing" title="Banks Grid"/>
+                <resource id="Prisma_DecidirPromotions::listing_cards" title="Credit Card Grid"/>
+                <resource id="Prisma_DecidirPromotions::listing_rules" title="Manage Rules"/>
+                <resource id="Prisma_DecidirPromotions::listing_transactions" title="List transactions logs"/>
+            </resource>
+        </resources>
+    </acl>
+</config>

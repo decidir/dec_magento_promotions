@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © IURCO and PRISMA. All rights reserved.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="prisma_decidir_promotions_bank" resource="default" comment="Promotions bank table">
+        <column xsi:type="int" name="entity_id" identity="true" padding="10" nullable="false" unsigned="true" comment="Entity ID"/>
+        <column xsi:type="text" name="bank_name" nullable="false" comment="Bank Name"/>
+        <column xsi:type="text" name="logo_path" nullable="true" comment="Bank Logo"/>
+        <column xsi:type="boolean" name="is_active" comment="Is Active" disabled="true"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+    <table name="prisma_decidir_promotions_card" resource="default" comment="Promotions Credit Cards table">
+        <column xsi:type="int" name="entity_id" identity="true" padding="10" nullable="false" unsigned="true" comment="Entity ID"/>
+        <column xsi:type="text" name="card_name" nullable="false" comment="Credit Card Name"/>
+        <column xsi:type="int" name="id_sps" nullable="false" padding="5" unsigned="true" comment="ID SPS"/>
+        <column xsi:type="int" name="id_nps" nullable="false" padding="5" unsigned="true" comment="ID NPS"/>
+        <column xsi:type="text" name="logo_path" nullable="true" comment="Credit Card Logo"/>
+        <column xsi:type="boolean" name="is_active" comment="Is Active" disabled="true"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+    <table name="prisma_decidir_promotions_rules" resource="default" comment="Promotions Rules Table">
+        <column xsi:type="int" name="entity_id" identity="true" padding="10" nullable="false" unsigned="true" comment="Entity ID"/>
+        <column xsi:type="text" name="rule_name" nullable="false" comment="Rule Name"/>
+        <column xsi:type="int" name="card_id" padding="10" nullable="false" unsigned="true" comment="Credit Cards related"/>
+        <column xsi:type="int" name="bank_id" padding="10" nullable="false" unsigned="true" comment="Banks related"/>
+        <column xsi:type="timestamp" name="from_date"  nullable="false" comment="From Date"/>
+        <column xsi:type="timestamp" name="to_date"  nullable="false" comment="To Date"/>
+        <column xsi:type="int" name="priority" unsigned="true" padding="2" nullable="false" comment="Rule Priority"/>
+        <column xsi:type="boolean" name="is_active" comment="Is Active"/>
+        <column xsi:type="text" name="applicable_days" nullable="false" comment="Applicable Days"/>
+        <column xsi:type="text" name="applicable_stores" nullable="false" comment="Applicable Stores"/>
+        <column xsi:type="text" name="fee_plans" nullable="true" comment="Fee Plans"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <constraint xsi:type="foreign"
+            referenceId="PRISMA_DECIDIR_PROMOTIONS_BANK_ENTITY_ID_PRISMA_DECIDIR_PROMOTIONS_RULES_BANK_ID"
+            table="prisma_decidir_promotion_rules" column="bank_id"
+            referenceTable="prisma_decidir_promotions_bank" referenceColumn="entity_id"
+            onDelete="CASCADE"
+        />
+        <constraint xsi:type="foreign"
+            referenceId="PRISMA_DECIDIR_PROMOTIONS_CARD_ENTITY_ID_PRISMA_DECIDIR_PROMOTIONS_RULES_CARD_ID"
+            table="prisma_decidir_promotion_rules" column="card_id"
+            referenceTable="prisma_decidir_promotions_card" referenceColumn="entity_id"
+            onDelete="CASCADE"
+        />
+    </table>
+    <table name="prisma_decidir_transaction_logs" resource="default" comment="Prisma transaction logs">
+        <column xsi:type="int" name="entity_id" identity="true" padding="10" unsigned="true" nullable="false" comment="Log ID" />
+        <column xsi:type="int" name="transaction_id" nullable="true" unsigned="true" comment="Decidir Transaction ID" />
+        <column xsi:type="varchar" name="status" nullable="true" length="32" comment="Decidir Transaction Status" />
+        <column xsi:type="varchar" name="cs_decision" nullable="true" length="32" comment="Decidir Transaction CyberSource Decision" />
+        <column xsi:type="text" name="response_payload" nullable="false" comment="Decidir Response payload" />
+        <column xsi:type="timestamp" name="created_at"  nullable="false" comment="Created At"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id" />
+        </constraint>
+    </table>
+</schema>
