@@ -1,0 +1,16 @@
+<?php
+/**
+ * Copyright © IURCO and PRISMA. All rights reserved.
+ */
+
+use Magento\Framework\Escaper;
+
+/**
+ * @var Escaper $escaper
+ */
+
+ $payload = $this->getTransactionResponsePayload($this->getId());
+ $transactionId =  $this->getTransactionId($this->getId());
+ ?>
+<h2><?= __('Response Payload for TRX: ') . $transactionId; ?></h2>
+<pre><?= $escaper->escapeHtml($payload) ?></pre>

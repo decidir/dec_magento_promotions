@@ -1,0 +1,59 @@
+{
+    "prisma_decidir_promotions_bank": {
+        "column": {
+            "entity_id": true,
+            "bank_name": true,
+            "logo_path": true,
+            "is_active": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "prisma_decidir_promotions_card": {
+        "column": {
+            "entity_id": true,
+            "card_name": true,
+            "id_sps": true,
+            "id_nps": true,
+            "logo_path": true,
+            "is_active": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "prisma_decidir_promotions_rules": {
+        "column": {
+            "entity_id": true,
+            "rule_name": true,
+            "card_id": true,
+            "bank_id": true,
+            "from_date": true,
+            "to_date": true,
+            "priority": true,
+            "is_active": true,
+            "applicable_days": true,
+            "applicable_stores": true,
+            "fee_plans": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "FK_AC57CC0756DCAD7383C69F293D2F9B93": true,
+            "FK_5A991217F756958EAE3EFA9EA36C0809": true
+        }
+    },
+    "prisma_decidir_transaction_logs": {
+        "column": {
+            "entity_id": true,
+            "transaction_id": true,
+            "status": true,
+            "cs_decision": true,
+            "response_payload": true,
+            "created_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
