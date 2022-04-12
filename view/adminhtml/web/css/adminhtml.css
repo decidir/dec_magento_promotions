@@ -1,0 +1,5 @@
+.admin__menu #menu-prisma-decidirpromotions-menu > a:before {
+    content: '';
+    background: url('../images/icon.svg') no-repeat center white;
+    background-size: cover;
+}
