@@ -7,7 +7,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Prisma_DecidirPromotions::decidir_promotions" sortOrder="1" title="Decidir Promotion Rules"
+        <add id="Prisma_DecidirPromotions::decidir_promotions" sortOrder="1" title="Payway Promotion Rules"
              module="Prisma_DecidirPromotions" parent="Prisma_DecidirPromotions::menu"
              resource="Prisma_DecidirPromotions::decidir_promotions" translate="title"/>
         <add id="Prisma_DecidirPromotions::listing" sortOrder="1" title="Manage Banks"
@@ -25,7 +25,7 @@
              resource="Prisma_DecidirPromotions::listing_transactions" translate="title" action="promotions/transaction/index"/>
 
         <add id="Prisma_DecidirPromotions::menu"
-             title="Decidir Promotions" module="Prisma_DecidirPromotions"
+             title="Payway Promotions" module="Prisma_DecidirPromotions"
              sortOrder="10"
              resource="Magento_Backend::content"
         />

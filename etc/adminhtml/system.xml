@@ -8,21 +8,21 @@
     <system>
         <section id="payment" >
             <group id="decidir" >
-                <field id="cctypes" translate="label" type="note" sortOrder="30" showInDefault="1" showInWebsite="0" canRestore="0">
+                <field id="cctypes" translate="label comment" type="note" sortOrder="30" showInDefault="1" showInWebsite="0" canRestore="0">
                     <label>Available Credit Cards</label>
                     <comment>
                         <![CDATA[
                             <p>Now handled by Prisma_DecidirPromotions</p>
-                            <p>See Promociones De Decidir -> Administrar Tarjetas de Crédito </p>
+                            <p>See Payway Promotions -> Manage Credit Cards</p>
                         ]]>
                     </comment>
                 </field>
-                <field id="installments" translate="label" type="note" sortOrder="35" showInDefault="1" showInWebsite="0" canRestore="0">
+                <field id="installments" translate="label comment" type="note" sortOrder="35" showInDefault="1" showInWebsite="0" canRestore="0">
                     <label>Available Installments</label>
                     <comment>
                         <![CDATA[
-                            <p>Now handled by Prisma_DecidirPromotions</p>
-                            <p>See Promociones De Decidir -> Administrar Promociones </p>
+                            <p>Now handled by Payway Promotions</p>
+                            <p>See Payway Promotions -> Manage Rules </p>
                         ]]>
                     </comment>
                 </field>

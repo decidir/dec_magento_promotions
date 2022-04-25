@@ -1,6 +1,6 @@
 {
   "name": "prisma/module-decidir-promotions",
-  "description": "This module allow the admin user to create and administrate promotions for the Decidir Payment Method",
+  "description": "This module allow the admin user to create and administrate promotions for the Payway Payment Method",
   "type": "magento2-module",
   "license": [
       "OSL-3.0",
@@ -13,7 +13,7 @@
       }
   ],
   "minimum-stability": "stable",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "autoload": {
     "files": [
       "registration.php"

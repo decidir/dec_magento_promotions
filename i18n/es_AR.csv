@@ -18,7 +18,7 @@
 "Manage Banks","Administrar Bancos"
 "Manage Credit Cards","Administrar Tarjetas de Crédito"
 "Manage Rules","Administrar Promociones"
-"Decidir Promotions","Promociones de Decidir"
+"Payway Promotions","Payway Promociones"
 "Credit Card Grid","Grilla de Tarjetas de Crédito"
 "Bank Information","Información de Banco"
 "Enable Bank","Habilitar Banco"
@@ -57,3 +57,4 @@
 "Bank","Banco"
 "From Date","Desde"
 "To Date","Hasta"
+"Now handled by Payway Promotions", "Ahora manjeado por Payway Promociones"
