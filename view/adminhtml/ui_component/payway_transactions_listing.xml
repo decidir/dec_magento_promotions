@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © IURCO and PRISMA. All rights reserved.
+ */
+-->
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">payway_transactions_listing.payway_transactions_listing_data_source</item>
+            <item name="deps" xsi:type="string">payway_transactions_listing.payway_transactions_listing_data_source</item>
+        </item>
+    </argument>
+    <settings>
+        <spinner>payway_transactions_listing_columns</spinner>
+        <deps>
+            <dep>payway_transactions_listing.payway_transactions_listing_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="payway_transactions_listing_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">entity_id</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <aclResource>Prisma_PaywayPromotions::listing_transactions</aclResource>
+        <dataProvider class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider"
+                      name="payway_transactions_listing_data_source">
+            <settings>
+                <requestFieldName>entity_id</requestFieldName>
+                <primaryFieldName>entity_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <listingToolbar name="listing_top">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="sticky" xsi:type="boolean">true</item>
+            </item>
+        </argument>
+        <columnsControls name="columns_controls"/>
+        <filters name="listing_filters">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sticky" xsi:type="boolean">true</item>
+                    <item name="templates" xsi:type="array">
+                        <item name="filters" xsi:type="array">
+                            <item name="select" xsi:type="array">
+                                <item name="component" xsi:type="string">Magento_Ui/js/form/element/ui-select</item>
+                                <item name="template" xsi:type="string">ui/grid/filters/elements/ui-select</item>
+                                <item name="filterOptions" xsi:type="boolean">true</item>
+                                <item name="multiple" xsi:type="boolean">false</item>
+                                <item name="showCheckbox" xsi:type="boolean">false</item>
+                            </item>
+                        </item>
+                    </item>
+                </item>
+                <item name="observers" xsi:type="array">
+                    <item name="column" xsi:type="string">column</item>
+                </item>
+            </argument>
+        </filters>
+
+        <filterSearch name="fulltext"/>
+
+        <exportButton name="export_button"/>
+        <paging name="listing_paging"/>
+    </listingToolbar>
+    <columns name="payway_transactions_listing_columns">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="resizeConfig" xsi:type="array">
+                    <item name="enabled" xsi:type="boolean">true</item>
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/resize</item>
+                    <item name="rootSelector" xsi:type="string">${ $.columnsProvider }:.admin__data-grid-wrap</item>
+                    <item name="columnsProvider" xsi:type="string">${ $.name }</item>
+                </item>
+            </item>
+        </argument>
+        <selectionsColumn name="ids">
+            <settings>
+                <indexField>entity_id</indexField>
+                <resizeEnabled>false</resizeEnabled>
+                <resizeDefaultWidth>55</resizeDefaultWidth>
+            </settings>
+        </selectionsColumn>
+        <column name="entity_id">
+            <settings>
+                <filter>textRange</filter>
+                <label translate="true">ID</label>
+                <sorting>desc</sorting>
+            </settings>
+        </column>
+        <column name="transaction_id" >
+            <settings>
+                <filter>int</filter>
+                <label translate="true">Payway Transaction ID</label>
+            </settings>
+        </column>
+        <column name="status">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Payway Transaction Status</label>
+            </settings>
+        </column>
+        <column name="cs_decision" class="Prisma\PaywayPromotions\Ui\Component\Listing\Columns\Transaction\CsDecision">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Payway Transaction CS Decision</label>
+                <bodyTmpl>ui/grid/cells/html</bodyTmpl>
+            </settings>
+        </column>
+        <column name="response_payload">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Payway Response Payload</label>
+            </settings>
+        </column>
+        <column name="created_at">
+            <settings>
+                <filter>dateRange</filter>
+                <dataType>date</dataType>
+                <label translate="true">Created At</label>
+            </settings>
+        </column>
+        <actionsColumn name="actions" class="Prisma\PaywayPromotions\Ui\Component\Listing\Columns\Transaction\ViewAction">
+            <settings>
+                <resizeEnabled>false</resizeEnabled>
+                <resizeDefaultWidth>107</resizeDefaultWidth>
+                <indexField>entity_id</indexField>
+            </settings>
+        </actionsColumn>
+    </columns>
+</listing>

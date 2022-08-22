@@ -4,15 +4,15 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Model\Repositories;
+namespace Prisma\PaywayPromotions\Model\Repositories;
 
 use Magento\Framework\Api\Filter;
 use Magento\Framework\Api\Search\FilterGroup;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Api\SearchCriteriaBuilder;
-use Prisma\DecidirPromotions\Api\Data\CreditCardInterface;
-use Prisma\DecidirPromotions\Api\CreditCardRepositoryInterface;
-use Prisma\DecidirPromotions\Model\ResourceModel\CreditCard\CollectionFactory;
+use Prisma\PaywayPromotions\Api\Data\CreditCardInterface;
+use Prisma\PaywayPromotions\Api\CreditCardRepositoryInterface;
+use Prisma\PaywayPromotions\Model\ResourceModel\CreditCard\CollectionFactory;
 
 class CreditCardRepository extends AbstractRepository implements CreditCardRepositoryInterface
 {
@@ -21,7 +21,7 @@ class CreditCardRepository extends AbstractRepository implements CreditCardRepos
      * @param CollectionFactory $collectionFactory
      * @param CollectionProcessorInterface $collectionProcessor
      * @param CreditCardInterface $model
-     * @param \Prisma\DecidirPromotions\Model\ResourceModel\CreditCard $resourceModel
+     * @param \Prisma\PaywayPromotions\Model\ResourceModel\CreditCard $resourceModel
      * @param SearchCriteriaBuilder $searchCriteriaBuilder
      * @param FilterGroup $filterGroup
      * @param Filter $filter
@@ -30,7 +30,7 @@ class CreditCardRepository extends AbstractRepository implements CreditCardRepos
         CollectionFactory $collectionFactory,
         CollectionProcessorInterface $collectionProcessor,
         CreditCardInterface $model,
-        \Prisma\DecidirPromotions\Model\ResourceModel\CreditCard $resourceModel,
+        \Prisma\PaywayPromotions\Model\ResourceModel\CreditCard $resourceModel,
         SearchCriteriaBuilder $searchCriteriaBuilder,
         FilterGroup $filterGroup,
         Filter $filter

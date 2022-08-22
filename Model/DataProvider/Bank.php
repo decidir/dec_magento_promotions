@@ -4,10 +4,10 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Model\DataProvider;
+namespace Prisma\PaywayPromotions\Model\DataProvider;
 
 use Magento\Ui\DataProvider\AbstractDataProvider;
-use Prisma\DecidirPromotions\Model\ResourceModel\Bank\CollectionFactory;
+use Prisma\PaywayPromotions\Model\ResourceModel\Bank\CollectionFactory;
 
 class Bank extends AbstractDataProvider
 {

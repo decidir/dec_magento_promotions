@@ -32,7 +32,7 @@
             </storageConfig>
             <updateUrl path="mui/index/render"/>
         </settings>
-        <aclResource>Prisma_DecidirPromotions::listing</aclResource>
+        <aclResource>Prisma_PaywayPromotions::listing</aclResource>
         <dataProvider class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider"
                       name="BanksGrid_data_source">
             <settings>
@@ -109,7 +109,7 @@
                 <sorting>desc</sorting>
             </settings>
         </column>
-        <column name="logo_path" component="Magento_Ui/js/grid/columns/thumbnail" class="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Thumbnail">
+        <column name="logo_path" component="Magento_Ui/js/grid/columns/thumbnail" class="Prisma\PaywayPromotions\Ui\Component\Listing\Columns\Thumbnail">
             <settings>
                 <hasPreview>1</hasPreview>
                 <label translate="true">Logo</label>
@@ -123,7 +123,7 @@
                 <label translate="true">Bank Name</label>
             </settings>
         </column>
-        <actionsColumn name="actions" class="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\BanksAction">
+        <actionsColumn name="actions" class="Prisma\PaywayPromotions\Ui\Component\Listing\Columns\BanksAction">
             <settings>
                 <resizeEnabled>false</resizeEnabled>
                 <resizeDefaultWidth>107</resizeDefaultWidth>

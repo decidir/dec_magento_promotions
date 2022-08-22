@@ -4,8 +4,8 @@
 var config = {
     map: {
         '*': {
-            'Prisma_Decidir/template/payment/decidir-payment.html':
-                'Prisma_DecidirPromotions/template/payment/decidir-promotions-payment.html'
+            'Prisma_Payway/template/payment/payway-payment.html':
+                'Prisma_PaywayPromotions/template/payment/payway-promotions-payment.html'
         }
     },
 };

@@ -4,13 +4,13 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Cron;
+namespace Prisma\PaywayPromotions\Cron;
 
 use Magento\Framework\Stdlib\DateTime\DateTime;
-use Prisma\DecidirPromotions\Api\Data\TransactionInterface;
-use Prisma\DecidirPromotions\Model\Repositories\TransactionRepository;
-use Prisma\DecidirPromotions\Model\ResourceModel\Transaction\CollectionFactory;
-use Prisma\DecidirPromotions\Model\Config\CronConfig;
+use Prisma\PaywayPromotions\Api\Data\TransactionInterface;
+use Prisma\PaywayPromotions\Model\Repositories\TransactionRepository;
+use Prisma\PaywayPromotions\Model\ResourceModel\Transaction\CollectionFactory;
+use Prisma\PaywayPromotions\Model\Config\CronConfig;
 use Psr\Log\LoggerInterface;
 
 class CleanupTransactionLogTable
@@ -39,7 +39,7 @@ class CleanupTransactionLogTable
      * @var  LoggerInterface $logger
      */
     private $logger;
-    
+
     /**
      * CleanupTransactionLogTable constructor.
      * @param DateTime $date
@@ -63,7 +63,7 @@ class CleanupTransactionLogTable
     }
 
     /**
-     * @return \Prisma\DecidirPromotions\Model\ResourceModel\Transaction\Collection
+     * @return \Prisma\PaywayPromotions\Model\ResourceModel\Transaction\Collection
      */
     protected function getTransactionsOlder()
     {
@@ -82,7 +82,7 @@ class CleanupTransactionLogTable
     public function execute()
     {
         if (!$this->cronConfig->isActive()) {
-            $this->logger->debug('Decidir CleanUp Transaction log not active.');
+            $this->logger->debug('Payway CleanUp Transaction log not active.');
             return $this;
         }
         $transactions = $this->getTransactionsOlder();

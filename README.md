@@ -1,33 +1,33 @@
-# Prisma Decidir Magento 2
+# Prisma Payway Magento 2
 
 ## M2 Versiones soportadas
 * Magento 2.4+
 
 ## Dependencias Requeridas
-- Modulo Prisma_Decidir 
+- Modulo Prisma_Payway 
 
 ## Instalación
-**Este módulo requiere Prisma_Decidir y no debe instalarse de manera aislada y manual**
-(Ver - [Prisma_Decidir README](https://github.com/decidir/dec_magento#readme))
+**Este módulo requiere Prisma_Payway y no debe instalarse de manera aislada y manual**
+(Ver - [Prisma_Payway README](https://github.com/decidir/dec_magento#readme))
 
 ## Configuración
 
 - Bancos
-  - Promociones de Decidir -> Admimistrar Bancos
+  - Promociones de Payway -> Admimistrar Bancos
     Aqui se darán de alta los Bancos pudiendo ingresar
     - Habilitar Banco (siempre debe estar habilitado)
     - Nombre del Banco
     - Logo
 - Tarjetas de Crédito
-    - Promociones de Decidir -> Admimistrar Tarjetas de Crédito
+    - Promociones de Payway -> Admimistrar Tarjetas de Crédito
       Aqui se darán de alta las Tarjetas de Crédito pudiendo ingresar
         - Habilitar Tarjeta (siempre debe estar habilitada)
         - Nombre de la Tarjeta
-        - ID SPS -> ID de pago a enviar a Decidir
+        - ID SPS -> ID de pago a enviar a Payway
         - ID NPS -> no utilizado actualmente
         - Logo
 - Promociones / Planes de Cuotas
-    - Promociones de Decidir -> Admimistrar Promociones
+    - Promociones de Payway -> Admimistrar Promociones
       Aqui se darán de alta las Promociones o Planes de Pago,
       combinando Banco/Tarjeta,  pudiendo ingresar
         - Habilitar Promoción
@@ -47,5 +47,5 @@
             - Cuota que se Envia -> Valor de la cuota utilizado para enviar a DECIDIR
     
 ## Desinstalación
-**Este módulo es parte de Prisma_Decidir y debe desinstalarse conjuntamente**
-Ver - [Prisma_Decidir README](https://github.com/decidir/dec_magento#readme))
+**Este módulo es parte de Prisma_Payway y debe desinstalarse conjuntamente**
+Ver - [Prisma_Payway README](https://github.com/decidir/dec_magento#readme))

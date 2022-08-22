@@ -7,25 +7,25 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Prisma_DecidirPromotions::decidir_promotions" sortOrder="1" title="Decidir Promotion Rules"
-             module="Prisma_DecidirPromotions" parent="Prisma_DecidirPromotions::menu"
-             resource="Prisma_DecidirPromotions::decidir_promotions" translate="title"/>
-        <add id="Prisma_DecidirPromotions::listing" sortOrder="1" title="Manage Banks"
-             module="Prisma_DecidirPromotions" parent="Prisma_DecidirPromotions::decidir_promotions"
-             resource="Prisma_DecidirPromotions::listing" translate="title" action="promotions/bank/index"/>
-        <add id="Prisma_DecidirPromotions::listing_cards" sortOrder="2" title="Manage Credit Cards"
-             module="Prisma_DecidirPromotions" parent="Prisma_DecidirPromotions::decidir_promotions"
-             resource="Prisma_DecidirPromotions::listing_cards" translate="title" action="promotions/card/index"/>
-        <add id="Prisma_DecidirPromotions::listing_rules" sortOrder="1" title="Manage Rules"
-             module="Prisma_DecidirPromotions" parent="Prisma_DecidirPromotions::decidir_promotions"
-             resource="Prisma_DecidirPromotions::listing_rules" translate="title" action="promotions/rule/index"/>
+        <add id="Prisma_PaywayPromotions::payway_promotions" sortOrder="1" title="Payway Promotion Rules"
+             module="Prisma_PaywayPromotions" parent="Prisma_PaywayPromotions::menu"
+             resource="Prisma_PaywayPromotions::payway_promotions" translate="title"/>
+        <add id="Prisma_PaywayPromotions::listing" sortOrder="1" title="Manage Banks"
+             module="Prisma_PaywayPromotions" parent="Prisma_PaywayPromotions::payway_promotions"
+             resource="Prisma_PaywayPromotions::listing" translate="title" action="promotions/bank/index"/>
+        <add id="Prisma_PaywayPromotions::listing_cards" sortOrder="2" title="Manage Credit Cards"
+             module="Prisma_PaywayPromotions" parent="Prisma_PaywayPromotions::payway_promotions"
+             resource="Prisma_PaywayPromotions::listing_cards" translate="title" action="promotions/card/index"/>
+        <add id="Prisma_PaywayPromotions::listing_rules" sortOrder="1" title="Manage Rules"
+             module="Prisma_PaywayPromotions" parent="Prisma_PaywayPromotions::payway_promotions"
+             resource="Prisma_PaywayPromotions::listing_rules" translate="title" action="promotions/rule/index"/>
 
-        <add id="Prisma_DecidirPromotions::listing_transactions" sortOrder="7" title="List transactions logs"
-             module="Prisma_DecidirPromotions" parent="Prisma_DecidirPromotions::decidir_promotions"
-             resource="Prisma_DecidirPromotions::listing_transactions" translate="title" action="promotions/transaction/index"/>
+        <add id="Prisma_PaywayPromotions::listing_transactions" sortOrder="7" title="List transactions logs"
+             module="Prisma_PaywayPromotions" parent="Prisma_PaywayPromotions::payway_promotions"
+             resource="Prisma_PaywayPromotions::listing_transactions" translate="title" action="promotions/transaction/index"/>
 
-        <add id="Prisma_DecidirPromotions::menu"
-             title="Decidir Promotions" module="Prisma_DecidirPromotions"
+        <add id="Prisma_PaywayPromotions::menu"
+             title="Payway Promotions" module="Prisma_PaywayPromotions"
              sortOrder="10"
              resource="Magento_Backend::content"
         />

@@ -4,17 +4,17 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Model\Repositories;
+namespace Prisma\PaywayPromotions\Model\Repositories;
 
 use Magento\Framework\Api\Filter;
 use Magento\Framework\Api\Search\FilterGroup;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Api\SearchCriteriaBuilder;
-use Prisma\DecidirPromotions\Api\AbstractRepositoryInterface;
+use Prisma\PaywayPromotions\Api\AbstractRepositoryInterface;
 
 /**
  * Class BankRepository
- * @package Prisma\DecidirPromotions\Model\Repositories
+ * @package Prisma\PaywayPromotions\Model\Repositories
  *
  * Implements all methods of the Repositories and represent the db interaction layer
  */

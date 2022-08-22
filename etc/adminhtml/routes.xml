@@ -8,7 +8,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="admin">
         <route id="promotions" frontName="promotions">
-            <module name="Prisma_DecidirPromotions"/>
+            <module name="Prisma_PaywayPromotions"/>
         </route>
     </router>
 </config>

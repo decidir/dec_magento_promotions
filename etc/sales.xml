@@ -8,7 +8,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Sales:etc/sales.xsd">
     <section name="order_invoice">
         <group name="totals">
-            <item name="prisma_decidir_promotions_charge" instance="Prisma\DecidirPromotions\Model\Total\ChargeOrderInvoice" sort_order="1000"/>
+            <item name="prisma_payway_promotions_charge" instance="Prisma\PaywayPromotions\Model\Total\ChargeOrderInvoice" sort_order="1000"/>
         </group>
     </section>
 </config>

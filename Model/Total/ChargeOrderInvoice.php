@@ -3,12 +3,12 @@
  * Copyright © IURCO and PRISMA. All rights reserved.
  */
 
-namespace Prisma\DecidirPromotions\Model\Total;
+namespace Prisma\PaywayPromotions\Model\Total;
 
 use Magento\Sales\Model\Order\Invoice\Total\AbstractTotal;
-use Prisma\Decidir\Model\Ui\ConfigProvider;
-use Prisma\DecidirPromotions\Api\Data\RuleInterface;
-use Prisma\DecidirPromotions\Model\Management\RuleManagement;
+use Prisma\Payway\Model\Ui\ConfigProvider;
+use Prisma\PaywayPromotions\Api\Data\RuleInterface;
+use Prisma\PaywayPromotions\Model\Management\RuleManagement;
 use Magento\Framework\Serialize\SerializerInterface;
 
 class ChargeOrderInvoice extends AbstractTotal

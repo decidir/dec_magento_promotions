@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Ui\Component\Listing\Columns;
+namespace Prisma\PaywayPromotions\Ui\Component\Listing\Columns;
 
 use Magento\Catalog\Helper\Image;
 use Magento\Framework\Exception\NoSuchEntityException;

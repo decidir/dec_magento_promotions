@@ -4,11 +4,11 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Block\Adminhtml\Transaction;
+namespace Prisma\PaywayPromotions\Block\Adminhtml\Transaction;
 
 use Magento\Backend\Block\Template;
 use Magento\Backend\Block\Template\Context;
-use Prisma\DecidirPromotions\Model\Management\TransactionLogManagement;
+use Prisma\PaywayPromotions\Model\Management\TransactionLogManagement;
 
 /**
  * Class View
@@ -19,7 +19,7 @@ class View extends Template
     /**
      * @var string
      */
-    //public $_template = 'Prisma_DecidirPromotions::transaction/view.phtml';
+    //public $_template = 'Prisma_PaywayPromotions::transaction/view.phtml';
 
     /**
      * @var TransactionLogManagement $transactionLogManagement

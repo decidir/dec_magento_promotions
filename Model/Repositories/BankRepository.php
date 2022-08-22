@@ -4,16 +4,16 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Model\Repositories;
+namespace Prisma\PaywayPromotions\Model\Repositories;
 
 use Magento\Framework\Api\Filter;
 use Magento\Framework\Api\Search\FilterGroup;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Api\SearchCriteriaBuilder;
-use Prisma\DecidirPromotions\Api\BankRepositoryInterface;
-use Prisma\DecidirPromotions\Api\Data\BankInterface;
-use Prisma\DecidirPromotions\Model\ResourceModel\Bank as ResourceBank;
-use Prisma\DecidirPromotions\Model\ResourceModel\Bank\CollectionFactory;
+use Prisma\PaywayPromotions\Api\BankRepositoryInterface;
+use Prisma\PaywayPromotions\Api\Data\BankInterface;
+use Prisma\PaywayPromotions\Model\ResourceModel\Bank as ResourceBank;
+use Prisma\PaywayPromotions\Model\ResourceModel\Bank\CollectionFactory;
 
 /**
  * Class BankRepository

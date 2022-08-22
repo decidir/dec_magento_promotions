@@ -4,10 +4,10 @@
  */
 declare(strict_types = 1);
 
-namespace Prisma\DecidirPromotions\Plugin;
+namespace Prisma\PaywayPromotions\Plugin;
 
-use Prisma\Decidir\Model\ResultProvider;
-use Prisma\DecidirPromotions\Model\Management\TransactionLogManagement;
+use Prisma\Payway\Model\ResultProvider;
+use Prisma\PaywayPromotions\Model\Management\TransactionLogManagement;
 
 /**
  * Class SaveNormalizedResponse

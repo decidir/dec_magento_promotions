@@ -4,19 +4,19 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Model\Management;
+namespace Prisma\PaywayPromotions\Model\Management;
 
-use Prisma\DecidirPromotions\Api\RulesManagementInterface;
-use Prisma\DecidirPromotions\Model\Rule;
-use Prisma\DecidirPromotions\Model\ResourceModel\Rule\CollectionFactory;
+use Prisma\PaywayPromotions\Api\RulesManagementInterface;
+use Prisma\PaywayPromotions\Model\Rule;
+use Prisma\PaywayPromotions\Model\ResourceModel\Rule\CollectionFactory;
 use Magento\Framework\Stdlib\DateTime\DateTime;
 use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
 use Magento\Config\Model\Config\Source\Locale\Weekdays;
 use Psr\Log\LoggerInterface;
 use Magento\Framework\Serialize\SerializerInterface;
-use Prisma\DecidirPromotions\Model\ResourceModel\CreditCard\CollectionFactory as CardCollectionFactory;
-use Prisma\DecidirPromotions\Model\ResourceModel\Bank\CollectionFactory as BankCollectionFactory;
-use Prisma\DecidirPromotions\Api\Data\RuleInterface;
+use Prisma\PaywayPromotions\Model\ResourceModel\CreditCard\CollectionFactory as CardCollectionFactory;
+use Prisma\PaywayPromotions\Model\ResourceModel\Bank\CollectionFactory as BankCollectionFactory;
+use Prisma\PaywayPromotions\Api\Data\RuleInterface;
 
 /**
  * Class RuleManagement
@@ -322,7 +322,7 @@ class RuleManagement implements RulesManagementInterface
      */
     public function getAppliedRule($ids)
     {
-        /** @see view/frontend/web/js/view/payment/method-renderer/decidir-promotions-method.js#  */
+        /** @see view/frontend/web/js/view/payment/method-renderer/payway-promotions-method.js#  */
         if (!$ids || empty($ids)) {
             return false;
         }

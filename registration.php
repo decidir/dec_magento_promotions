@@ -7,6 +7,6 @@ use Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
     ComponentRegistrar::MODULE,
-    'Prisma_DecidirPromotions',
+    'Prisma_PaywayPromotions',
     __DIR__
 );

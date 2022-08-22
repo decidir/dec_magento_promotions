@@ -32,7 +32,7 @@
             </storageConfig>
             <updateUrl path="mui/index/render"/>
         </settings>
-        <aclResource>Prisma_DecidirPromotions::listing_rules</aclResource>
+        <aclResource>Prisma_PaywayPromotions::listing_rules</aclResource>
         <dataProvider class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider"
                       name="RulesGrid_data_source">
             <settings>
@@ -115,13 +115,13 @@
                 <label translate="true">Rule Name</label>
             </settings>
         </column>
-        <column name="card_id" class="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Card\Labels">
+        <column name="card_id" class="Prisma\PaywayPromotions\Ui\Component\Listing\Columns\Card\Labels">
             <settings>
                 <filter>text</filter>
                 <label translate="true">Card</label>
             </settings>
         </column>
-        <column name="bank_id" class="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Bank\Labels">
+        <column name="bank_id" class="Prisma\PaywayPromotions\Ui\Component\Listing\Columns\Bank\Labels">
             <settings>
                 <filter>text</filter>
                 <label translate="true">Bank</label>
@@ -170,25 +170,25 @@
                 </options>
             </settings>
         </column>
-        <column name="applicable_days" class="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Rules\Days">
+        <column name="applicable_days" class="Prisma\PaywayPromotions\Ui\Component\Listing\Columns\Rules\Days">
             <settings>
                 <filter>text</filter>
                 <label translate="true">Applicable Days</label>
             </settings>
         </column>
-        <column name="applicable_stores" class="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Rules\Stores">
+        <column name="applicable_stores" class="Prisma\PaywayPromotions\Ui\Component\Listing\Columns\Rules\Stores">
             <settings>
                 <filter>text</filter>
                 <label translate="true">Applicable Stores</label>
             </settings>
         </column>
-        <column name="fee_plans" class="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Rules\Fees">
+        <column name="fee_plans" class="Prisma\PaywayPromotions\Ui\Component\Listing\Columns\Rules\Fees">
             <settings>
                 <filter>text</filter>
                 <label translate="true">Fee Plans</label>
             </settings>
         </column>
-        <actionsColumn name="actions" class="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\RulesAction">
+        <actionsColumn name="actions" class="Prisma\PaywayPromotions\Ui\Component\Listing\Columns\RulesAction">
             <settings>
                 <resizeEnabled>false</resizeEnabled>
                 <resizeDefaultWidth>107</resizeDefaultWidth>

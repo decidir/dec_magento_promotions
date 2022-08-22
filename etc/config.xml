@@ -7,11 +7,11 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
         <payment>
-            <decidir>
+            <payway>
                 <transaction_save_log_active>0</transaction_save_log_active>
                 <cron_active>0</cron_active>
                 <transactions_older_day>60</transactions_older_day>
-            </decidir>
+            </payway>
         </payment>
     </default>
 </config>

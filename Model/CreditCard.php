@@ -4,12 +4,12 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Model;
+namespace Prisma\PaywayPromotions\Model;
 
 use Magento\Framework\DataObject\IdentityInterface;
 use Magento\Framework\Model\AbstractModel;
-use Prisma\DecidirPromotions\Api\Data\CreditCardInterface;
-use Prisma\DecidirPromotions\Model\ResourceModel\CreditCard as ResourceModel;
+use Prisma\PaywayPromotions\Api\Data\CreditCardInterface;
+use Prisma\PaywayPromotions\Model\ResourceModel\CreditCard as ResourceModel;
 
 class CreditCard extends AbstractModel implements CreditCardInterface, IdentityInterface
 {
@@ -18,7 +18,7 @@ class CreditCard extends AbstractModel implements CreditCardInterface, IdentityI
     const ID_NPS_FIELD = 'id_nps';
     const IS_ACTIVE_FIELD = 'is_active';
     const THUMBNAIL_LOGO_PATH = 'logo_path';
-    const CACHE_TAG = 'prisma_decidir_promotions_card';
+    const CACHE_TAG = 'prisma_payway_promotions_card';
     protected $_cacheTag = self::CACHE_TAG;
     protected $_eventPrefix = self::CACHE_TAG;
 

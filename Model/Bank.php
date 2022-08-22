@@ -4,19 +4,19 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Model;
+namespace Prisma\PaywayPromotions\Model;
 
 use Magento\Framework\DataObject\IdentityInterface;
 use Magento\Framework\Model\AbstractModel;
-use Prisma\DecidirPromotions\Api\Data\BankInterface;
-use Prisma\DecidirPromotions\Model\ResourceModel\Bank as ResourceModel;
+use Prisma\PaywayPromotions\Api\Data\BankInterface;
+use Prisma\PaywayPromotions\Model\ResourceModel\Bank as ResourceModel;
 
 class Bank extends AbstractModel implements BankInterface, IdentityInterface
 {
     const BANK_NAME_FIELD = 'bank_name';
     const IS_ACTIVE_FIELD = 'is_active';
     const THUMBNAIL_LOGO_PATH = 'logo_path';
-    const CACHE_TAG = 'prisma_decidir_promotions_bank';
+    const CACHE_TAG = 'prisma_payway_promotions_bank';
     protected $_cacheTag = self::CACHE_TAG;
     protected $_eventPrefix = self::CACHE_TAG;
     /**

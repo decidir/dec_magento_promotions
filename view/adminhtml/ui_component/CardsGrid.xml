@@ -32,7 +32,7 @@
             </storageConfig>
             <updateUrl path="mui/index/render"/>
         </settings>
-        <aclResource>Prisma_DecidirPromotions::listing_cards</aclResource>
+        <aclResource>Prisma_PaywayPromotions::listing_cards</aclResource>
         <dataProvider class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider"
                       name="CardsGrid_data_source">
             <settings>
@@ -127,7 +127,7 @@
                 <label translate="true">ID NPS</label>
             </settings>
         </column>
-        <column name="logo_path" component="Magento_Ui/js/grid/columns/thumbnail" class="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Thumbnail">
+        <column name="logo_path" component="Magento_Ui/js/grid/columns/thumbnail" class="Prisma\PaywayPromotions\Ui\Component\Listing\Columns\Thumbnail">
             <settings>
                 <hasPreview>1</hasPreview>
                 <label translate="true">Logo</label>
@@ -135,7 +135,7 @@
                 <altField>title</altField>
             </settings>
         </column>
-        <actionsColumn name="actions" class="Prisma\DecidirPromotions\Ui\Component\Listing\Columns\CcAction">
+        <actionsColumn name="actions" class="Prisma\PaywayPromotions\Ui\Component\Listing\Columns\CcAction">
             <settings>
                 <resizeEnabled>false</resizeEnabled>
                 <resizeDefaultWidth>107</resizeDefaultWidth>

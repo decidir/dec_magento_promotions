@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Controller\Adminhtml\Rule;
+namespace Prisma\PaywayPromotions\Controller\Adminhtml\Rule;
 
 class Edit extends Action
 {

@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Api;
+namespace Prisma\PaywayPromotions\Api;
 
 use Magento\Framework\Api\Filter;
 

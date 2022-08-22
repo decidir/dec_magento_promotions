@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Model\Config\Source;
+namespace Prisma\PaywayPromotions\Model\Config\Source;
 
 class TransactionOlderDays
 {

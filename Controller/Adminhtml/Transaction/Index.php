@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Controller\Adminhtml\Transaction;
+namespace Prisma\PaywayPromotions\Controller\Adminhtml\Transaction;
 
 use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Controller\ResultInterface;
@@ -15,7 +15,7 @@ class Index extends Action
     /**
      * Authorization level of a basic admin session
      */
-    const ADMIN_RESOURCE = 'Prisma_DecidirPromotions::listing_transactions';
+    const ADMIN_RESOURCE = 'Prisma_PaywayPromotions::listing_transactions';
 
 
     /**
@@ -27,7 +27,7 @@ class Index extends Action
     public function execute()
     {
         $resultPage = parent::execute();
-        $resultPage->getConfig()->getTitle()->prepend((__('Decidir Transaction Logs Grid')));
+        $resultPage->getConfig()->getTitle()->prepend((__('Payway Transaction Logs Grid')));
 
         return $resultPage;
     }

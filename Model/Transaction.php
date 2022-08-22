@@ -4,16 +4,16 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Model;
+namespace Prisma\PaywayPromotions\Model;
 
 use Magento\Framework\DataObject\IdentityInterface;
 use Magento\Framework\Model\AbstractModel;
-use Prisma\DecidirPromotions\Api\Data\TransactionInterface;
-use Prisma\DecidirPromotions\Model\ResourceModel\Transaction as ResourceModel;
+use Prisma\PaywayPromotions\Api\Data\TransactionInterface;
+use Prisma\PaywayPromotions\Model\ResourceModel\Transaction as ResourceModel;
 
 class Transaction extends AbstractModel implements TransactionInterface, IdentityInterface
 {
-    const CACHE_TAG = 'prisma_decidir_promotions_transaction';
+    const CACHE_TAG = 'prisma_payway_promotions_transaction';
 
     protected $_cacheTag = self::CACHE_TAG;
     protected $_eventPrefix = self::CACHE_TAG;

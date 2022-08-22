@@ -8,9 +8,9 @@
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Prisma\DecidirPromotions\Block\Adminhtml\Transaction\View"
-                   template="Prisma_DecidirPromotions::transaction/view.phtml"
-                   name="prisma.decidirpromotions.transaction.view" />
+            <block class="Prisma\PaywayPromotions\Block\Adminhtml\Transaction\View"
+                   template="Prisma_PaywayPromotions::transaction/view.phtml"
+                   name="prisma.paywaypromotions.transaction.view" />
         </referenceContainer>
     </body>
 </page>

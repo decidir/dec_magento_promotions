@@ -4,14 +4,14 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Model\Management;
+namespace Prisma\PaywayPromotions\Model\Management;
 
-use Prisma\Decidir\Gateway\Response\Cybersource\CybersourceHandler;
-use Prisma\DecidirPromotions\Api\Data\TransactionInterface;
-use Prisma\DecidirPromotions\Api\TransactionManagementInterface;
-use Prisma\DecidirPromotions\Model\Transaction;
-use Prisma\DecidirPromotions\Model\ResourceModel\Transaction\CollectionFactory;
-use Prisma\DecidirPromotions\Model\Repositories\TransactionRepository;
+use Prisma\Payway\Gateway\Response\Cybersource\CybersourceHandler;
+use Prisma\PaywayPromotions\Api\Data\TransactionInterface;
+use Prisma\PaywayPromotions\Api\TransactionManagementInterface;
+use Prisma\PaywayPromotions\Model\Transaction;
+use Prisma\PaywayPromotions\Model\ResourceModel\Transaction\CollectionFactory;
+use Prisma\PaywayPromotions\Model\Repositories\TransactionRepository;
 use Magento\Framework\Serialize\SerializerInterface;
 use Magento\Framework\Exception\LocalizedException;
 use Psr\Log\LoggerInterface;
@@ -20,7 +20,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 
 class TransactionLogManagement implements TransactionManagementInterface
 {
-    const XPATH_TRANSACTION_SAVE_ACTIVE = 'payment/decidir/transaction_save_log_active';
+    const XPATH_TRANSACTION_SAVE_ACTIVE = 'payment/payway/transaction_save_log_active';
 
     /**
      * @var Transaction $transactionModel
@@ -97,7 +97,7 @@ class TransactionLogManagement implements TransactionManagementInterface
         $status = $response[TransactionInterface::TRANSACTION_STATUS];
         $csDecision =
             $response[CybersourceHandler::CS_FRAUD_DETECTION][CybersourceHandler::STATUS][CybersourceHandler::CS_DECISION]
-            ?? 'Not informed by Decidir CS';
+            ?? 'Not informed by Payway CS';
         $transactionId = (int) $response[TransactionInterface::RESPONSE_TRX_ID];
         $responsePayload = $this->serializer->serialize($response);
         $createdAt = $this->date->gmtDate();

@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Controller\Adminhtml\Card;
+namespace Prisma\PaywayPromotions\Controller\Adminhtml\Card;
 
 use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Controller\ResultInterface;
@@ -15,7 +15,7 @@ class Index extends Action
     /**
      * Authorization level of a basic admin session
      */
-    const ADMIN_RESOURCE = 'Prisma_DecidirPromotions::listing_cards';
+    const ADMIN_RESOURCE = 'Prisma_PaywayPromotions::listing_cards';
 
     /**
      * Execute action based on request and return result

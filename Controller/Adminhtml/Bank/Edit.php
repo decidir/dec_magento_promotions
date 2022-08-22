@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Controller\Adminhtml\Bank;
+namespace Prisma\PaywayPromotions\Controller\Adminhtml\Bank;
 
 class Edit extends Action
 {

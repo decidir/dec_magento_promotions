@@ -4,16 +4,16 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Model;
+namespace Prisma\PaywayPromotions\Model;
 
 use Magento\Framework\DataObject\IdentityInterface;
 use Magento\Framework\Model\AbstractModel;
-use Prisma\DecidirPromotions\Api\Data\RuleInterface;
-use Prisma\DecidirPromotions\Model\ResourceModel\Rule as ResourceModel;
+use Prisma\PaywayPromotions\Api\Data\RuleInterface;
+use Prisma\PaywayPromotions\Model\ResourceModel\Rule as ResourceModel;
 
 class Rule extends AbstractModel implements RuleInterface, IdentityInterface
 {
-    const CACHE_TAG = 'prisma_decidir_promotions_rules';
+    const CACHE_TAG = 'prisma_payway_promotions_rules';
 
     protected $_cacheTag = self::CACHE_TAG;
     protected $_eventPrefix = self::CACHE_TAG;

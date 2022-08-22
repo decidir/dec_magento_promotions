@@ -7,39 +7,39 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <section id="payment" >
-            <group id="decidir" >
-                <field id="cctypes" translate="label" type="note" sortOrder="30" showInDefault="1" showInWebsite="0" canRestore="0">
+            <group id="payway" >
+                <field id="cctypes" translate="label comment" type="note" sortOrder="30" showInDefault="1" showInWebsite="0" canRestore="0">
                     <label>Available Credit Cards</label>
                     <comment>
                         <![CDATA[
-                            <p>Now handled by Prisma_DecidirPromotions</p>
-                            <p>See Promociones De Decidir -> Administrar Tarjetas de Crédito </p>
+                            <p>Ahora manejado por Payway Promociones</p>
+                            <p>Ver Payway Promociones -> Administrar Tarjetas de Crédito</p>
                         ]]>
                     </comment>
                 </field>
-                <field id="installments" translate="label" type="note" sortOrder="35" showInDefault="1" showInWebsite="0" canRestore="0">
+                <field id="installments" translate="label comment" type="note" sortOrder="35" showInDefault="1" showInWebsite="0" canRestore="0">
                     <label>Available Installments</label>
                     <comment>
                         <![CDATA[
-                            <p>Now handled by Prisma_DecidirPromotions</p>
-                            <p>See Promociones De Decidir -> Administrar Promociones </p>
+                           <p>Ahora manejado por Payway Promociones</p>
+                           <p>Ver Payway Promociones -> Administrar Promociones</p>
                         ]]>
                     </comment>
                 </field>
                 <field id="transaction_save_log_active" translate="label" type="select" sortOrder="299" showInDefault="1" showInWebsite="0" canRestore="1">
                     <label>Save Transaction Logs</label>
-                    <comment>If enabled, transaction payload and info will be saved into table prisma_decidir_transaction_logs</comment>
+                    <comment>If enabled, transaction payload and info will be saved into table prisma_payway_transaction_logs</comment>
                     <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
                 </field>
                 <field id="cron_active" translate="label" type="select" sortOrder="300" showInDefault="1" showInWebsite="0" canRestore="1">
                     <label>Enable Cleanup Logs Cron</label>
-                    <comment>If enabled, This cron will delete older transaction logs from table prisma_decidir_transaction_logs</comment>
+                    <comment>If enabled, This cron will delete older transaction logs from table prisma_payway_transaction_logs</comment>
                     <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
                 </field>
                 <field id="transactions_older_day" translate="label" type="select" sortOrder="301" showInDefault="1" showInWebsite="0">
                     <label>Clean Transaction Logs Older Than</label>
                     <comment>Days to keep logs, older logs than configured will be deleted.</comment>
-                    <source_model>Prisma\DecidirPromotions\Model\Config\Source\TransactionOlderDays</source_model>
+                    <source_model>Prisma\PaywayPromotions\Model\Config\Source\TransactionOlderDays</source_model>
                     <validate>required-entry</validate>
                     <depends>
                         <field id="*/*/cron_active">1</field>

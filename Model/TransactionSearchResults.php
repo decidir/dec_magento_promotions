@@ -4,9 +4,9 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Model;
+namespace Prisma\PaywayPromotions\Model;
 
-use Prisma\DecidirPromotions\Api\Data\TransactionSearchResultsInterface;
+use Prisma\PaywayPromotions\Api\Data\TransactionSearchResultsInterface;
 use Magento\Framework\Api\SearchResults;
 
 /**

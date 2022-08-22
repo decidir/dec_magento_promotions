@@ -9,11 +9,11 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Prisma_DecidirPromotions::decidir_promotions" title="Decidir Promotion Rules"/>
-                <resource id="Prisma_DecidirPromotions::listing" title="Banks Grid"/>
-                <resource id="Prisma_DecidirPromotions::listing_cards" title="Credit Card Grid"/>
-                <resource id="Prisma_DecidirPromotions::listing_rules" title="Manage Rules"/>
-                <resource id="Prisma_DecidirPromotions::listing_transactions" title="List transactions logs"/>
+                <resource id="Prisma_PaywayPromotions::payway_promotions" title="Payway Promotion Rules"/>
+                <resource id="Prisma_PaywayPromotions::listing" title="Banks Grid"/>
+                <resource id="Prisma_PaywayPromotions::listing_cards" title="Credit Card Grid"/>
+                <resource id="Prisma_PaywayPromotions::listing_rules" title="Manage Rules"/>
+                <resource id="Prisma_PaywayPromotions::listing_transactions" title="List transactions logs"/>
             </resource>
         </resources>
     </acl>

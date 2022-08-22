@@ -4,10 +4,10 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Api;
+namespace Prisma\PaywayPromotions\Api;
 
 use Exception;
-use Prisma\DecidirPromotions\Api\Data\BankInterface;
+use Prisma\PaywayPromotions\Api\Data\BankInterface;
 
 /**
  * Interface BankRepositoryInterface

@@ -4,12 +4,12 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Controller\Adminhtml\Transaction;
+namespace Prisma\PaywayPromotions\Controller\Adminhtml\Transaction;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
 use Magento\Framework\View\Result\PageFactory;
-use Prisma\DecidirPromotions\Api\TransactionRepositoryInterface;
+use Prisma\PaywayPromotions\Api\TransactionRepositoryInterface;
 
 class Action extends \Magento\Backend\App\Action
 {

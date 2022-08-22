@@ -4,14 +4,14 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Transaction;
+namespace Prisma\PaywayPromotions\Ui\Component\Listing\Columns\Transaction;
 
 use Magento\Framework\UrlInterface;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Ui\Component\Listing\Columns\Column;
-use Prisma\Decidir\Api\Data\Validator\Cybersource\CybersourceValidatorInterface;
-use Prisma\DecidirPromotions\Api\Data\TransactionInterface;
+use Prisma\Payway\Api\Data\Validator\Cybersource\CybersourceValidatorInterface;
+use Prisma\PaywayPromotions\Api\Data\TransactionInterface;
 
 /**
  * Class Action

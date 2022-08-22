@@ -4,12 +4,12 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Observer;
+namespace Prisma\PaywayPromotions\Observer;
 
 use Magento\Framework\Event\Observer;
 use Magento\Payment\Observer\AbstractDataAssignObserver;
 use Magento\Quote\Api\Data\PaymentInterface;
-use Prisma\DecidirPromotions\Model\Management\RuleManagement;
+use Prisma\PaywayPromotions\Model\Management\RuleManagement;
 use Magento\Framework\Serialize\SerializerInterface;
 
 /**

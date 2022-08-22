@@ -4,12 +4,12 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Gateway\Request;
+namespace Prisma\PaywayPromotions\Gateway\Request;
 
 use Magento\Payment\Gateway\Request\BuilderInterface;
 use Magento\Payment\Model\InfoInterface;
-use Prisma\Decidir\Gateway\Helper\DataReader;
-use Prisma\Decidir\Model\Config;
+use Prisma\Payway\Gateway\Helper\DataReader;
+use Prisma\Payway\Model\Config;
 
 /**
  * Builds information related to the Payment
@@ -84,7 +84,7 @@ class PaymentDataBuilder implements BuilderInterface
     }
 
     /**
-     * Return Decidir payment code
+     * Return Payway payment code
      *
      * @param InfoInterface $payment
      * @return int

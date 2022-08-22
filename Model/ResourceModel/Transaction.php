@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Model\ResourceModel;
+namespace Prisma\PaywayPromotions\Model\ResourceModel;
 
 use Magento\Framework\Model\ResourceModel\Db\VersionControl\AbstractDb;
 use Magento\Framework\Model\ResourceModel\Db\VersionControl\RelationComposite;
@@ -15,14 +15,14 @@ class Transaction extends AbstractDb
     /**
      * @var string
      */
-    protected $_eventPrefix = 'prisma_decidir_promotions_transactions_resource_model';
+    protected $_eventPrefix = 'prisma_payway_promotions_transactions_resource_model';
 
     /**
      * @inheritdoc
      */
     protected function _construct()
     {
-        $this->_init('prisma_decidir_transaction_logs', 'entity_id');
+        $this->_init('prisma_payway_transaction_logs', 'entity_id');
     }
 
     public function __construct(

@@ -6,7 +6,7 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
     <group id="default">
-        <job name="prisma_decidirpromotions_cleanup_transaction_logs" instance="Prisma\DecidirPromotions\Cron\CleanupTransactionLogTable" method="execute">
+        <job name="prisma_paywaypromotions_cleanup_transaction_logs" instance="Prisma\PaywayPromotions\Cron\CleanupTransactionLogTable" method="execute">
             <schedule>* * * * *</schedule>
         </job>
     </group>

@@ -4,19 +4,19 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Controller\Adminhtml\Rule;
+namespace Prisma\PaywayPromotions\Controller\Adminhtml\Rule;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
 use Magento\Framework\View\Result\PageFactory;
-use Prisma\DecidirPromotions\Api\Data\RuleInterface;
-use Prisma\DecidirPromotions\Api\RuleRepositoryInterface;
+use Prisma\PaywayPromotions\Api\Data\RuleInterface;
+use Prisma\PaywayPromotions\Api\RuleRepositoryInterface;
 use Exception;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Serialize\SerializerInterface;
 use Psr\Log\LoggerInterface;
-use Prisma\DecidirPromotions\Model\ResourceModel\Rule\CollectionFactory;
+use Prisma\PaywayPromotions\Model\ResourceModel\Rule\CollectionFactory;
 
 class Save extends Action
 {
@@ -108,7 +108,7 @@ class Save extends Action
                             }
                          }
                      }
-                     
+
                     $rule->setData($this->getFormattedData($data));
                     $this->_session->setPageData($rule->getData());
                     $this->ruleRepository->save($rule);

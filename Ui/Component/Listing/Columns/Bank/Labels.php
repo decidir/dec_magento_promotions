@@ -4,11 +4,11 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Bank;
+namespace Prisma\PaywayPromotions\Ui\Component\Listing\Columns\Bank;
 
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
-use Prisma\DecidirPromotions\Api\BankRepositoryInterface;
+use Prisma\PaywayPromotions\Api\BankRepositoryInterface;
 
 class Labels extends \Magento\Ui\Component\Listing\Columns\Column
 {

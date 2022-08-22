@@ -1,5 +1,5 @@
 {
-    "prisma_decidir_promotions_bank": {
+    "prisma_payway_promotions_bank": {
         "column": {
             "entity_id": true,
             "bank_name": true,
@@ -10,7 +10,7 @@
             "PRIMARY": true
         }
     },
-    "prisma_decidir_promotions_card": {
+    "prisma_payway_promotions_card": {
         "column": {
             "entity_id": true,
             "card_name": true,
@@ -23,7 +23,7 @@
             "PRIMARY": true
         }
     },
-    "prisma_decidir_promotions_rules": {
+    "prisma_payway_promotions_rules": {
         "column": {
             "entity_id": true,
             "rule_name": true,
@@ -43,7 +43,7 @@
             "FK_5A991217F756958EAE3EFA9EA36C0809": true
         }
     },
-    "prisma_decidir_transaction_logs": {
+    "prisma_payway_transaction_logs": {
         "column": {
             "entity_id": true,
             "transaction_id": true,

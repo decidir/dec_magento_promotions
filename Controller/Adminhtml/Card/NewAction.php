@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Controller\Adminhtml\Card;
+namespace Prisma\PaywayPromotions\Controller\Adminhtml\Card;
 
 class NewAction extends Action
 {

@@ -4,14 +4,14 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Controller\Adminhtml\Card;
+namespace Prisma\PaywayPromotions\Controller\Adminhtml\Card;
 
 use Exception;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\View\Result\PageFactory;
-use Prisma\DecidirPromotions\Api\CreditCardRepositoryInterface;
-use Prisma\DecidirPromotions\Model\ImageUploader;
+use Prisma\PaywayPromotions\Api\CreditCardRepositoryInterface;
+use Prisma\PaywayPromotions\Model\ImageUploader;
 
 class Save extends Action
 {

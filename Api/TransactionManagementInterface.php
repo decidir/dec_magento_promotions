@@ -4,10 +4,10 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Api;
+namespace Prisma\PaywayPromotions\Api;
 
-use Prisma\DecidirPromotions\Model\ResourceModel\Transaction\Collection;
-use Prisma\DecidirPromotions\Model\Transaction;
+use Prisma\PaywayPromotions\Model\ResourceModel\Transaction\Collection;
+use Prisma\PaywayPromotions\Model\Transaction;
 
 /**
  * @api

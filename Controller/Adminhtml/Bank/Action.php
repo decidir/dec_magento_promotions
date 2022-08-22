@@ -4,11 +4,11 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Controller\Adminhtml\Bank;
+namespace Prisma\PaywayPromotions\Controller\Adminhtml\Bank;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
-use Prisma\DecidirPromotions\Api\BankRepositoryInterface;
+use Prisma\PaywayPromotions\Api\BankRepositoryInterface;
 
 class Action extends \Magento\Backend\App\Action
 {

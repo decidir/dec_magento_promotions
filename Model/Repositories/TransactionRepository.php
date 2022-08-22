@@ -4,18 +4,18 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Model\Repositories;
+namespace Prisma\PaywayPromotions\Model\Repositories;
 
 use Magento\Framework\Api\Filter;
 use Magento\Framework\Api\Search\FilterGroup;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\Api\SearchCriteriaInterface;
-use Prisma\DecidirPromotions\Api\Data\TransactionInterface;
-use Prisma\DecidirPromotions\Model\ResourceModel\Transaction as ResourceTransaction;
-use Prisma\DecidirPromotions\Model\ResourceModel\Transaction\CollectionFactory;
-use Prisma\DecidirPromotions\Api\Data\TransactionSearchResultsInterfaceFactory;
-use Prisma\DecidirPromotions\Api\TransactionRepositoryInterface;
+use Prisma\PaywayPromotions\Api\Data\TransactionInterface;
+use Prisma\PaywayPromotions\Model\ResourceModel\Transaction as ResourceTransaction;
+use Prisma\PaywayPromotions\Model\ResourceModel\Transaction\CollectionFactory;
+use Prisma\PaywayPromotions\Api\Data\TransactionSearchResultsInterfaceFactory;
+use Prisma\PaywayPromotions\Api\TransactionRepositoryInterface;
 
 class TransactionRepository extends AbstractRepository implements TransactionRepositoryInterface
 {

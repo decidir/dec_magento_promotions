@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Controller\Adminhtml\Bank;
+namespace Prisma\PaywayPromotions\Controller\Adminhtml\Bank;
 
 use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Controller\ResultFactory;

@@ -4,9 +4,9 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Card;
+namespace Prisma\PaywayPromotions\Ui\Component\Listing\Columns\Card;
 
-use Prisma\DecidirPromotions\Api\CreditCardRepositoryInterface;
+use Prisma\PaywayPromotions\Api\CreditCardRepositoryInterface;
 
 class Options implements \Magento\Framework\Data\OptionSourceInterface
 {

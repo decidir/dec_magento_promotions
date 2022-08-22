@@ -4,11 +4,11 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Card;
+namespace Prisma\PaywayPromotions\Ui\Component\Listing\Columns\Card;
 
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
-use Prisma\DecidirPromotions\Api\CreditCardRepositoryInterface;
+use Prisma\PaywayPromotions\Api\CreditCardRepositoryInterface;
 
 class Labels extends \Magento\Ui\Component\Listing\Columns\Column
 {

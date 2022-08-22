@@ -4,11 +4,11 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Controller\Adminhtml;
+namespace Prisma\PaywayPromotions\Controller\Adminhtml;
 
 use Magento\Framework\App\Action\HttpPostActionInterface;
 use Magento\Framework\Controller\ResultFactory;
-use Prisma\DecidirPromotions\Model\ImageUploader;
+use Prisma\PaywayPromotions\Model\ImageUploader;
 
 /**
  * Class Upload

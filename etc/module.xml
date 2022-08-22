@@ -6,9 +6,9 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Prisma_DecidirPromotions" version="1.0.0">
+    <module name="Prisma_PaywayPromotions" version="1.0.0">
         <sequence>
-            <module name="Prisma_Decidir"/>
+            <module name="Prisma_Payway"/>
         </sequence>
     </module>
 </config>

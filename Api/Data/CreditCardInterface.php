@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Api\Data;
+namespace Prisma\PaywayPromotions\Api\Data;
 
 interface CreditCardInterface
 {

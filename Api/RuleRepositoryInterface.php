@@ -4,11 +4,11 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Api;
+namespace Prisma\PaywayPromotions\Api;
 
 use Exception;
 use Magento\Framework\Api\SearchCriteriaInterface;
-use Prisma\DecidirPromotions\Api\Data\RuleInterface;
+use Prisma\PaywayPromotions\Api\Data\RuleInterface;
 
 interface RuleRepositoryInterface extends AbstractRepositoryInterface
 {
@@ -32,7 +32,7 @@ interface RuleRepositoryInterface extends AbstractRepositoryInterface
 
     /**
      * @param SearchCriteriaInterface $searchCriteria
-     * @return \Prisma\DecidirPromotions\Api\Data\RuleSearchResultsInterface
+     * @return \Prisma\PaywayPromotions\Api\Data\RuleSearchResultsInterface
      */
     public function getRuleList(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria);
 }

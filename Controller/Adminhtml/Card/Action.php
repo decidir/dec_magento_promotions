@@ -4,11 +4,11 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Controller\Adminhtml\Card;
+namespace Prisma\PaywayPromotions\Controller\Adminhtml\Card;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
-use Prisma\DecidirPromotions\Api\CreditCardRepositoryInterface;
+use Prisma\PaywayPromotions\Api\CreditCardRepositoryInterface;
 
 class Action extends \Magento\Backend\App\Action
 {

@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Controller\Adminhtml\Rule;
+namespace Prisma\PaywayPromotions\Controller\Adminhtml\Rule;
 
 use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Controller\ResultInterface;
@@ -15,7 +15,7 @@ class Index extends Action
     /**
      * Authorization level of a basic admin session
      */
-    const ADMIN_RESOURCE = 'Prisma_DecidirPromotions::listing_rules';
+    const ADMIN_RESOURCE = 'Prisma_PaywayPromotions::listing_rules';
 
     /**
      * Execute action based on request and return result

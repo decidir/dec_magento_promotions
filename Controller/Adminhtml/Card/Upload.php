@@ -4,13 +4,13 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Controller\Adminhtml\Card;
+namespace Prisma\PaywayPromotions\Controller\Adminhtml\Card;
 
 /**
  * Class Upload
  * You should avoid to delete this class if you're using it in di.xml
  */
-class Upload extends \Prisma\DecidirPromotions\Controller\Adminhtml\Upload
+class Upload extends \Prisma\PaywayPromotions\Controller\Adminhtml\Upload
 {
 
 }

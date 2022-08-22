@@ -4,12 +4,12 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Block\Adminhtml;
+namespace Prisma\PaywayPromotions\Block\Adminhtml;
 
 use Magento\Payment\Block\Info\Cc;
 use Magento\Framework\App\State;
 use Magento\Framework\Serialize\SerializerInterface;
-use Prisma\DecidirPromotions\Api\Data\RuleInterface;
+use Prisma\PaywayPromotions\Api\Data\RuleInterface;
 use Magento\Framework\Pricing\PriceCurrencyInterface;
 
 /**

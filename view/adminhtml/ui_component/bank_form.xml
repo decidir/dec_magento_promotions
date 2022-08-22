@@ -38,7 +38,7 @@
         <settings>
             <submitUrl path="*/*/save"/>
         </settings>
-        <dataProvider class="Prisma\DecidirPromotions\Model\DataProvider\Bank" name="BanksGrid_data_source">
+        <dataProvider class="Prisma\PaywayPromotions\Model\DataProvider\Bank" name="BanksGrid_data_source">
             <settings>
                 <requestFieldName>id</requestFieldName>
                 <primaryFieldName>entity_id</primaryFieldName>
@@ -94,7 +94,7 @@
                         <uploaderConfig>
                             <param xsi:type="url" name="url" path="promotions/bank/upload"/>
                         </uploaderConfig>
-                        <previewTmpl>Prisma_DecidirPromotions/image-preview</previewTmpl>
+                        <previewTmpl>Prisma_PaywayPromotions/image-preview</previewTmpl>
                         <openDialogTitle>Media Gallery</openDialogTitle>
                         <initialMediaGalleryOpenSubpath>catalog/category</initialMediaGalleryOpenSubpath>
                         <allowedExtensions>jpg jpeg gif png</allowedExtensions>

@@ -4,15 +4,15 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Model\Config;
+namespace Prisma\PaywayPromotions\Model\Config;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 
 class CronConfig
 {
 
-    const XPATH_MODULE_ACTIVE = 'payment/decidir/cron_active';
-    const XPATH_MODULE_OLDER_DAYS = 'payment/decidir/transactions_older_day';
+    const XPATH_MODULE_ACTIVE = 'payment/payway/cron_active';
+    const XPATH_MODULE_OLDER_DAYS = 'payment/payway/transactions_older_day';
     const PAGE_SIZE = 2500;
 
     /**

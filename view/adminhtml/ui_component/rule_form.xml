@@ -38,7 +38,7 @@
         <settings>
             <submitUrl path="*/*/save"/>
         </settings>
-        <dataProvider class="Prisma\DecidirPromotions\Model\DataProvider\Rule" name="RulesGrid_data_source">
+        <dataProvider class="Prisma\PaywayPromotions\Model\DataProvider\Rule" name="RulesGrid_data_source">
             <settings>
                 <requestFieldName>id</requestFieldName>
                 <primaryFieldName>entity_id</primaryFieldName>
@@ -88,7 +88,7 @@
         </field>
         <field name="card_id" sortOrder="20" formElement="select">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Card\Options</item>
+                <item name="options" xsi:type="object">Prisma\PaywayPromotions\Ui\Component\Listing\Columns\Card\Options</item>
             </argument>
             <settings>
                 <dataType>text</dataType>
@@ -108,7 +108,7 @@
         </field>
         <field name="bank_id" sortOrder="30" formElement="select">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">Prisma\DecidirPromotions\Ui\Component\Listing\Columns\Bank\Options</item>
+                <item name="options" xsi:type="object">Prisma\PaywayPromotions\Ui\Component\Listing\Columns\Bank\Options</item>
             </argument>
             <settings>
                 <dataType>text</dataType>

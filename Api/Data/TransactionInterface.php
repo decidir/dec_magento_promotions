@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Api\Data;
+namespace Prisma\PaywayPromotions\Api\Data;
 
 use tests\verification\Tests\DataActionsTest;
 
@@ -29,52 +29,52 @@ interface TransactionInterface
     public function getEntityId(): int;
 
     /**
-     * Get Decidir Transaction ID
+     * Get Payway Transaction ID
      * @return int
      */
     public function getTransactionId(): int;
 
     /**
-     * Set Decidir Transaction Id
+     * Set Payway Transaction Id
      * @param int $transactionId
      * @return mixed
      */
     public function setTransactionId(int $transactionId);
 
     /**
-     * Get Decidir Transaction Status
+     * Get Payway Transaction Status
      * @return string
      */
     public function getStatus(): string;
 
     /**
-     * Set Decidir Transaction Status
+     * Set Payway Transaction Status
      * @param string $status
      * @return mixed
      */
     public function setStatus(string $status);
 
     /**
-     * Get Decidir Transaction CS Decision
+     * Get Payway Transaction CS Decision
      * @return string
      */
     public function getCsDecision(): string;
 
     /**
-     * Get Decidir Transaction CS Decision
+     * Get Payway Transaction CS Decision
      * @param string $decision
      * @return mixed
      */
     public function setCsDecision(string $decision);
 
     /**
-     * Get Decidir Transaction Response Payload
+     * Get Payway Transaction Response Payload
      * @return string
      */
     public function getResponsePayload(): string;
 
     /**
-     * Set Decidir Transaction Response Payload
+     * Set Payway Transaction Response Payload
      * @param string $responsePayload
      * @return mixed
      */

@@ -4,19 +4,19 @@
  */
 declare(strict_types=1);
 
-namespace Prisma\DecidirPromotions\Model\Repositories;
+namespace Prisma\PaywayPromotions\Model\Repositories;
 
 use Magento\Framework\Api\Filter;
 use Magento\Framework\Api\Search\FilterGroup;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\Api\SearchCriteriaInterface;
-use Prisma\DecidirPromotions\Api\Data\RuleInterface;
-use Prisma\DecidirPromotions\Model\ResourceModel\Rule as ResourceRule;
-use Prisma\DecidirPromotions\Model\ResourceModel\Rule\CollectionFactory;
-use Prisma\DecidirPromotions\Api\Data\RuleSearchResultsInterfaceFactory;
+use Prisma\PaywayPromotions\Api\Data\RuleInterface;
+use Prisma\PaywayPromotions\Model\ResourceModel\Rule as ResourceRule;
+use Prisma\PaywayPromotions\Model\ResourceModel\Rule\CollectionFactory;
+use Prisma\PaywayPromotions\Api\Data\RuleSearchResultsInterfaceFactory;
 
-class RuleRepository extends AbstractRepository implements \Prisma\DecidirPromotions\Api\RuleRepositoryInterface
+class RuleRepository extends AbstractRepository implements \Prisma\PaywayPromotions\Api\RuleRepositoryInterface
 {
     /**
      * @var RuleSearchResultsInterfaceFactory $searchResultsFactory
